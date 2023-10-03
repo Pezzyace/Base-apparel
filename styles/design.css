@@ -1,4 +1,4 @@
-p, body{
+*{
   margin: 0;
   padding: 0;
   font-family: 'Josefin Sans', san serif;
@@ -7,39 +7,45 @@ p, body{
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  width: 70%;;
-  padding-top: 50px;
-  
+  width: 70%;
+  padding: 70px 0 30px;
 }
 .mobile-img{
   display: none;
 }
 .left{
   background-image: url(../images/bg-pattern-desktop.svg);
-  background-size: contain;
-  padding: 40px 50px 0px 80px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
 }
 .right{
-  width: 1fr;
+  background: url(../images/hero-desktop.jpg) no-repeat;
+  background-size: cover;
 }
 .img{
   height: 450px;
 }
+
 .attribution{
   font-size: 12px;
   text-align: center;
   margin-top: 10px;
 }
 .logo{
-  margin-bottom: 50px;
+  margin: 50px 0;
   width: 25%;
 }
 .head{
-  font-size: 40px;
+  font-size: 60px;
   text-transform: uppercase;
   letter-spacing: 5px;
   width: 50%;
   margin-bottom: 10px;
+  line-height: 1;
+  font-weight: 700;
 }
 .tip{
   color: hsl(0, 36%, 70%);
@@ -48,43 +54,53 @@ p, body{
   width: 76%;
   font-size: 12px;
   color: hsl(0, 36%, 70%);
-  line-height: 25px;
+  line-height: 20px;
   margin-bottom: 20px;
 }
-.subscribe-container{
+
+/*****************************Textbox***************************************/
+.sub-container{
+  margin-bottom: 5px;
+  position: relative;
   display: flex;
+  align-items: center;
+  width: 70%;
 }
 .subscription-textbox{
-  width: 60%;
+  width: 100%;
   outline: none;
   border-width: 1px;
   border-color: hsl(0, 36%, 70%);
   border-style: solid;
-  padding: 10px 25px 10px 25px;
+  padding: 10px 15px;
   border-radius: 40px;
+  font-size: 13px;
 }
-.error{
+.sub-container .error{
   display: none;
   position: absolute;
-  margin: 10px 0px 10px 13%;
-  justify-content: center;
+  right: 40px;
+  height: 20px;
 }
-.error-icon{
-  width: 17px;
-}
-.hidden{
-  display: n0ne;
-}
-.subscribe-btn{
+.sub-container button{
   position: absolute;
-  border-style: none;
-  width: 5%;
+  right: -40px;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  border: none;
   border-radius: 30px;
-  height: 37px;
-  margin: 0px 0px 0px 15%;
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
-.subscribe-btn:hover{
+input.err {
+  border-color: red;
+}
+.message{
+  color: hsl(0, 36%, 70%);
+  display: none;
+  margin-left: 10px;
+}
+.sub-container button:hover{
   background: linear-gradient(135deg, hsl(0, 62%, 95%), hsl(0, 100%, 90%));
   box-shadow: 5px 10px 19px hsl(0, 95%, 85%);
 }
@@ -97,7 +113,7 @@ p, body{
   }
   .left{
     padding: 20px 0px 0px 0px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
@@ -109,36 +125,35 @@ p, body{
 
   .mobile-img{
     display: block;
-    position: relative;
-    margin: 0px 0px 30px -38px;
+    width: 100%;
+    margin-bottom: 20px;
   }
   .right{
     display: none;
   }
   .head, .info{
     margin: 0;
-    width: 100%;
+    width: 80%;
     padding-bottom: 20px;
     align-items: center;
     text-align: center;
   }
-  .subscribe-container{
-    margin-bottom: 30px;
-    width: 100%;
-  }
-  .subscription-textbox{
+  .sub-container{
+    margin-bottom: 7px;
     width: 70%;
   }
-  .error{
-    width: 86%;
+  .sub-container .error{
+    right: 60px;
   }
-  .subscribe-btn{
-    width: 20%;
-    margin: 0px 0px 0px 60%;
+  .sub-container button{
+    right: -15px;
   }
   .attribution{
     margin-bottom: 30px;
     font-size: 11px;
+  }
+  .message{
+    margin-bottom: 10px;
   }
 
 }

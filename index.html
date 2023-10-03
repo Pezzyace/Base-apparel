@@ -21,20 +21,15 @@
       <p class="info">
         Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.  
-        
       </p>
-      <div class="subscribe-container">
-        <input type="text" placeholder="Email Address" class="subscription-textbox">
-        <div class="error hidden">
-          <img src="images/icon-error.svg" alt="" class="error-icon">
-        </div>
-        <button class="subscribe-btn">
-          <img src="images/icon-arrow.svg" alt="" class="arrow">
-        </button>
+      <div class="sub-container">
+        <input type="text" placeholder="Email Address" class="subscription-textbox" id="email">
+        <img src="images/icon-error.svg" alt="" class="error" id="error">
+        <button><img src="images/icon-arrow.svg" alt="" class="arrow" id="submit-btn"></button>
       </div>
+      <p class="message" id="emailErrorMessage">Please enter a valid email address.</p>
     </div>
     <div class="right">
-      <img src="images/hero-desktop.jpg" alt="" class="img">
     </div>
   </div>
   <footer>
@@ -43,5 +38,6 @@
       Coded by <a href="#">Peace Akaehomen</a>.
     </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
